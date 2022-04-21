@@ -1,0 +1,23 @@
+
+// Color variables
+$col_backgroundGrey: #f2f2f2;
+$col_redText: #c01803;
+$col_navbar: #363636;
+$col_headerGrey: #595959;
+$col_button: #b40003d7;
+$col_buttonHover: #b40003;
+$col_Mbutton: #6C757E;
+
+@font-face {
+	font-family: "Eurostile";
+	font-style: normal;
+	font-weight: normal;
+	src: url("../assets/fonts/EuroStyle Normal.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Eurostile bold";
+	font-style: normal;
+	font-weight: bold;
+	src: url("../assets/fonts/EurostileBold.ttf") format("truetype");
+}

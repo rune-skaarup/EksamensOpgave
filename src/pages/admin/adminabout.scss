@@ -1,0 +1,78 @@
+@import "../../sass/variables";
+
+.retAbout{
+    height: 100vh;
+    padding: 40px 200px;
+
+    h1{
+        font-family: Eurostile bold;
+        text-transform: capitalize;
+        
+        margin-bottom: 20px;    
+    }   
+
+    form{
+        label:nth-of-type(1){
+
+            input{
+                display: block;
+                width: 60%;
+                padding: 10px;
+                font-size: 18px;
+                border-radius: 5px;
+                background-color: white;
+                margin-bottom: 15px;
+
+                border: 2px solid rgba(183, 183, 183, 0.533);
+            }
+
+        }
+
+        label:nth-of-type(2){
+            .ck-editor{
+                width: 60%;
+                font-size: 18px;
+                border-radius: 5px;
+                background-color: white;
+
+            }
+        }
+
+        label:nth-of-type(3){
+            h4{
+                margin-top: 10px;
+            }
+
+            input{
+
+                margin-top: 5px;
+                font-size: 16px;
+                text-transform: capitalize;
+                color: white;
+                z-index: 1;
+                color: $col_Mbutton;
+                cursor: pointer;
+
+                &:hover{
+                    background-color: $col_headerGrey;
+                }
+            }
+        }
+
+        button {
+
+            margin: 20px auto;
+            padding: 6px 10px;
+            font-size: 16px;
+            text-transform: capitalize;
+            color: white;
+            z-index: 1;
+            background-color: $col_Mbutton;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            
+        }
+    }
+
+}

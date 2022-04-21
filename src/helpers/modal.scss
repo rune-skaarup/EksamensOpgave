@@ -1,0 +1,182 @@
+@import "../sass/variables";
+
+#modal {
+    display: none;
+    width: 100%;
+    height: 100vh;
+
+    background-color: rgba(0, 0, 0, 0.356);
+
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    &.active {
+        display: block;
+    }
+    overflow-y: scroll;
+    
+    &::-webkit-scrollbar{
+        display: none;
+    }
+    
+    .mContainer {
+
+        margin: 100px auto;
+        width: 35%;
+        height: auto;
+
+        background-color: white;
+
+        .mTours {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr;
+
+            /* 
+            .slideshow-container {
+                max-width: 400px;
+                height: 340px;
+                position: relative;
+                margin: auto;
+
+                .mySlides {
+                    display: none;
+                    text-align: center;
+                    img {
+                        object-fit: contain;
+                        width: 300px;
+                    }
+                }
+            } */
+
+            .hr2 {
+                grid-column: 1/-1;
+                grid-row: 6/7;
+            }
+
+            .hr1 {
+                grid-column: 1/-1;
+                grid-row: 1/2;
+                margin-bottom: 10px;
+            }
+
+            button:nth-of-type(1) {
+                grid-column: 2/3;
+                grid-row: 1/2;
+
+                margin-left: auto;
+                margin-right: 0;
+                margin-top: 1px;
+
+                z-index: 1;
+                padding: 15px;
+                height: 20px;
+                width: 55px;
+                background-color: white;
+                border: none;
+                img {
+                    background-color: none;
+                    height: 20px;
+                }
+            }
+
+            button:nth-of-type(2) {
+                grid-column: 2/3;
+                grid-row: 6/7;
+
+                height: 30px;
+                width: 55px;
+
+                margin: 20px 15px 15px auto;
+                font-size: 16px;
+                text-transform: capitalize;
+                color: white;
+                z-index: 1;
+                background-color: $col_Mbutton;
+                border: none;
+                border-radius: 3px;
+                cursor: pointer;
+            }
+
+            #dummy {
+                grid-column: 1/-1;
+                grid-row: 2/3;
+                padding: 15px;
+                height: 400px;
+                width: 100%;
+                object-fit: cover;
+            }
+
+            h1:nth-of-type(1) {
+                grid-column: 1/2;
+                grid-row: 1/2;
+
+                font-family: Eurostile bold;
+                padding: 14px;
+                margin-bottom: 10px;
+                font-size: 24px;
+            }
+
+            h1:nth-of-type(2) {
+                grid-column: 1/2;
+                grid-row: 3/4;
+
+                font-family: Eurostile bold;
+                padding: 0px 0px 20px 20px;
+                font-size: 40px;
+            }
+
+            .rating {
+                grid-column: 2/3;
+                grid-row: 3/4;
+
+                display: flex;
+                justify-content: right;
+                padding-right: 20px;
+
+                img {
+                    height: 30px;
+                    width: 30px;
+                    object-fit: contain;
+                }
+            }
+
+            .content {
+                grid-column: 1/-1;
+                grid-row: 4/5;
+
+                padding: 0px 20px;
+
+                .c1 {
+                    margin-bottom: 20px;
+                }
+
+                li {
+                    margin-left: 30px;
+                }
+
+                h3:nth-of-type(1) {
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                    font-size: 20px;
+                }
+                h3:nth-of-type(2) {
+                    font-weight: bold;
+                    font-size: 16px;
+                }
+            }
+
+            h2 {
+                grid-column: 1/2;
+                grid-row: 5/6;
+
+                margin-top: 30px;
+                font-family: Eurostile bold;
+                color: lightgray;
+                padding: 15px;
+                font-size: 0.9em;
+            }
+        }
+    }
+}

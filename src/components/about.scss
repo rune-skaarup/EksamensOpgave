@@ -1,0 +1,39 @@
+@import "../sass/variables";
+
+.aContainer{
+    margin-top: 100px;
+
+    .omOs{
+
+        padding: 15px ;
+        text-align: center;
+        background-color: $col_headerGrey;
+        border-radius: 8px;
+        color: white;
+        font-family: Eurostile bold;
+        }
+        .about{
+                display: grid;
+                grid-template-columns: 3fr 1fr;
+                grid-template-rows: 1fr;   
+
+                margin: 50px 0px;
+            img{
+
+                height: 130px;
+                object-fit: cover;
+                
+            }
+
+            p{
+                font-size: 24px;
+                padding-right: 20px;
+
+            }
+
+        }
+
+
+
+
+}

@@ -1,0 +1,67 @@
+@import "../../sass/variables";
+
+.admintours {
+    padding: 20px 10%;
+
+    table {
+        width: 100%;
+        text-align: center;
+        border-collapse: collapse;
+
+        a{
+            color: black;
+        }
+
+        .icon {
+            font-size: 30px;
+            color: black;
+            
+        }
+
+        img {
+            width: 50%;
+        }
+
+        thead {
+            background-color: $col_Mbutton;
+
+            tr{
+
+                color: $col_backgroundGrey;
+                th:nth-of-type(2){
+                    a{
+                        text-decoration: none;
+                        color: $col_backgroundGrey;
+                        font-size: 1.3em;
+                        &:hover{
+                            color: white;
+                        }
+                        
+                        
+                    }
+                }
+            }
+
+        }
+        tbody {
+            tr:nth-of-type(3) {
+                td:nth-of-type(1) {
+                    width: 35%;
+                }
+            }
+        }
+    }
+    .title {
+        font-size: 1.6em;
+        font-family: Eurostile bold;
+        padding: 0;
+    }
+
+    table,
+    td,
+    th {
+        padding: 10px;
+        border: 1px solid black;
+        
+    }
+}

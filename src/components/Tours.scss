@@ -1,0 +1,98 @@
+@import "../sass/variables";
+
+.tContainer {
+    margin-top: 60px;
+
+    .rejsemål {
+        padding: 15px;
+        text-align: center;
+        background-color: $col_headerGrey;
+        border-radius: 8px;
+        color: white;
+        font-family: Eurostile bold;
+    }
+
+    .fContainer {
+        padding: 50px 0px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2%;
+
+        .tours {
+            position: relative;
+            width: 100%;
+            border: 0.5px solid lightgrey;
+            background-color: white;
+            border-radius: 5px;
+            padding-bottom: 100px;
+
+
+            img {
+                border-radius: 5px 5px 0 0;
+                width: 100%;
+                object-fit: contain;
+            }
+
+            .tourGrid {
+                
+                display: flex;
+
+                .title {
+                    h1 {
+                        font-family: Eurostile bold;
+                        padding: 15px;
+                    }
+
+                    h2 {
+                        font-family: Eurostile bold;
+                        color: lightgray;
+                        padding: 15px;
+                        font-size: 1.5em;
+                    }
+                }
+                .rating {
+                    
+                    justify-content: right;
+
+                    margin: 20px 0px 0px auto;
+                    padding-right: 20px;
+
+                    img {
+                        height: 30px;
+                        width: 30px;
+                        object-fit: contain;
+                    }
+                }
+            }
+
+            p {
+                font-family: Eurostile;
+                padding: 15px 30px 0px 15px;
+                font-size: 1.8em;
+            }
+
+            #openBtn {
+                position: absolute;
+                bottom: 0;
+                margin: 15px;
+                height: 50px;
+                width: 120px;
+                text-transform: capitalize;
+                font-size: 1.2em;
+                background-color: $col_button;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $col_buttonHover;
+                }
+
+                &.active {
+                    border: $col_buttonHover 2px solid;
+                }
+            }
+        }
+    }
+}
