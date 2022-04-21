@@ -80,8 +80,6 @@ const Tours = () => {
         target.classList.toggle( "active" );
     }
 
-
-
     return (
         <div className='tContainer'>
             <div className='rejsemål' >
@@ -103,7 +101,7 @@ const Tours = () => {
                                 <div className='rating'>{ parse( rating( t.rating ) ) }</div>
                             </div>
 
-                            <p>{ parse(t.teaser) }</p>
+                            <div className='pTag'>{ parse( t.teaser ) } </div>
                             <button onClick={ () => handleModal( i ) } id="openBtn" >læs mere</button>
 
                         </div>
@@ -113,10 +111,10 @@ const Tours = () => {
                         {
                             valg &&
                             <div className='mTours'>
-                                    <button onClick={ toggleModal }> <img src={ close } /> </button>
+                                <button onClick={ toggleModal }> <img src={ close } alt="close" /> </button>
 
                                 <h1>{ valg.title } </h1>
-                                <hr className='hr1'/>
+                                <hr className='hr1' />
 
                                 <img src={ Formel } id="dummy" alt="dummy" />
                                 <h1>{ valg.title } </h1>
@@ -130,14 +128,10 @@ const Tours = () => {
                                     <div >{ parse( valg.roomtype ) }</div>
                                 </div>
 
-                                
-
                                 <h2> { new Date( valg.traveldate ).toLocaleDateString( "da-DK", dato ) } </h2>
-                                <hr className='hr2'/>
-                                
+                                <hr className='hr2' />
+
                                 <button onClick={ toggleModal }> close </button>
-
-
 
                                 {/*                                 <div className="slideshow-container">
                                     {

@@ -28,9 +28,12 @@ const AdminRetTour = () => {
 
     //CKEditor-tekst
     const [ editortxt, setEditortxt ] = useState()
+    const [ editortxt2, setEditortxt2 ] = useState()
+    const [ editortxt3, setEditortxt3 ] = useState()
 
     //"state" til customhook - thumb image
     const [ thumb, makeThumb ] = useShowThumb();
+    const [ thumbs, makeThumbs ] = useShowThumb();
 
     // Kald api'et og hent den treatment (ud fra id) som skal rettes
     useEffect( () => {
@@ -51,7 +54,7 @@ const AdminRetTour = () => {
             console.log( res )
             setLoading( false )
         } )
-    }, [ besked ] )
+    }, [ besked, id ] )
 
 
 
@@ -60,7 +63,6 @@ const AdminRetTour = () => {
         e.preventDefault();
         setLoading( true )
 
-        // Send treatment til apikalds filen
         adminRetTours( e.target, id ).then( res => {
 
             if ( res ) {
@@ -111,14 +113,14 @@ const AdminRetTour = () => {
 
                     <label>
                         <h1>content</h1>
-                        <textarea name='content' defaultValue={ editortxt } style={ { display: "none" } } />
+                        <textarea name='content' defaultValue={ editortxt2 } style={ { display: "none" } } />
                         <CKEditor
                             editor={ Editor }
                             data={ tours.content } // De data der skal være i formularen når den loader/opdaterer
-                            onReady={ ( editor ) => setEditortxt( editor.getData() ) }
+                            onReady={ ( editor ) => setEditortxt2( editor.getData() ) }
                             onChange={ ( event, editor ) => {
                                 const data = editor.getData();
-                                setEditortxt( data );
+                                setEditortxt2( data );
                             }
                             }
 
@@ -126,22 +128,22 @@ const AdminRetTour = () => {
                     </label>
                     <label>
                         <h1>roomtype</h1>
-                        <textarea name='roomtype' defaultValue={ editortxt } style={ { display: "none" } } />
+                        <textarea name='roomtype' defaultValue={ editortxt3 } style={ { display: "none" } } />
 
                         <CKEditor
                             editor={ Editor }
                             data={ tours.roomtype } // De data der skal være i formularen når den loader/opdaterer
-                            onReady={ ( editor ) => setEditortxt( editor.getData() ) }
+                            onReady={ ( editor ) => setEditortxt3( editor.getData() ) }
                             onChange={ ( event, editor ) => {
                                 const data = editor.getData();
-                                setEditortxt( data );
+                                setEditortxt3( data );
                             }
                             }
                         />
                     </label>
                     <label>
                         <h1>traveldate</h1>
-                        <input type="date" name='traveldate' defaultValue={ tours.traveldate } />
+                        <input type="date" name='traveldate' defaultValue={ tours.traveldate } min="2022-01-01" />
                     </label>
                     <label>
                         <h1>rating </h1>
@@ -150,12 +152,12 @@ const AdminRetTour = () => {
 
                     <label>
                         <h1>gallery</h1>
-                        <input type="file" name='gallery' multiple />
+                        <input type="file" name='gallery' multiple onChange={ ( e ) => makeThumbs( e.target.files[ 0 ] ) } />
                     </label>
 
                     {
                         // Vis thumb-image med brug af custom-hoook
-                        thumb && <img src={ thumb } width="100" alt="Uploadet billede" />
+                        thumbs && <img src={ thumbs } width="100" alt="Uploadet billede" />
 
                     }
 
@@ -173,7 +175,7 @@ const AdminRetTour = () => {
 
                     <label>
                         <h1>Vælg nyt billede </h1>
-                        <input type="file" name="coverimage" onChange={ ( e ) => makeThumb( e.target.files[ 0 ] ) } /> {/* Den skal kun hente det éne billede der ligger i files */ }
+                        <input type="file" name="coverimage" onChange={ ( e ) => makeThumb( e.target.files[ 0 ] ) } />
                     </label>
 
                     {

@@ -1,0 +1,59 @@
+@import "../../sass/variables";
+
+.opretTour {
+    padding: 20px 10%;
+
+    img{
+        margin-right: 10px;
+    }
+
+    h2 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    form {
+        label {
+            h1 {
+                font-family: Eurostile bold;
+                text-transform: capitalize;
+
+                font-size: 20px;
+                margin-bottom: 4px;
+            }
+
+            input {
+                display: block;
+                width: 60%;
+                padding: 10px;
+                font-size: 18px;
+                border-radius: 5px;
+                background-color: white;
+                margin-bottom: 15px;
+
+                border: 2px solid rgba(183, 183, 183, 0.533);
+            }
+        }
+
+        .ck-editor {
+            width: 60%;
+            font-size: 18px;
+            border-radius: 5px;
+            background-color: white;
+            margin-bottom: 15px;
+        }
+
+        button {
+            margin: 20px auto;
+            padding: 6px 10px;
+            font-size: 16px;
+            text-transform: capitalize;
+            color: white;
+            z-index: 1;
+            background-color: $col_Mbutton;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    }
+}

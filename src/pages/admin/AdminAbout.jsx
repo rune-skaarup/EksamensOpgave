@@ -7,7 +7,7 @@ import Error from '../../components/Error';
 import Editor from '@ckeditor/ckeditor5-build-classic'
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 
-import { adminRetAbout, hentAbout, imageUrl  } from '../../helpers/apikald';
+import { adminRetAbout, hentAbout, imageUrl } from '../../helpers/apikald';
 
 //Customhook som viser thumbimage
 import useShowThumb from '../../hooks/useShowThumb';
@@ -35,20 +35,20 @@ const AdminAbout = () => {
 
     hentAbout().then( res => {
 
-        if ( res ) {
-            // Data
-            setAbout( res )
-            setFejl( false )
-        } else {
-            // No data
-            setFejl( true )
-            setAbout()
-        }
+      if ( res ) {
+        // Data
+        setAbout( res )
+        setFejl( false )
+      } else {
+        // No data
+        setFejl( true )
+        setAbout()
+      }
 
-        console.log( res )
-        setLoading( false )
+      console.log( res )
+      setLoading( false )
     } )
-}, [ besked ] )
+  }, [ besked ] )
 
   const handleSubmit = ( e ) => {
 
@@ -92,14 +92,14 @@ const AdminAbout = () => {
           <br />
 
           <label>
-           <h2>Beskrivelse </h2>
+            <h2>Beskrivelse </h2>
             <textarea name='content' defaultValue={ editortxt } style={ { display: "none" } } />
 
             <CKEditor
               editor={ Editor }
               data={ about.content } // De data der skal være i formularen når den loader/opdaterer
               onReady={ ( editor ) => setEditortxt( editor.getData() ) }
-              onChange={ ( editor ) => {
+              onChange={ ( event, editor ) => {
                 const data = editor.getData();
                 setEditortxt( data );
               }
@@ -117,7 +117,7 @@ const AdminAbout = () => {
           </div>
 
           <label>
-            <h4>Vælg nyt billede</h4> 
+            <h4>Vælg nyt billede</h4>
             <input type="file" name="image" onChange={ ( e ) => makeThumb( e.target.files[ 0 ] ) } /> {/* Den skal kun hente det éne billede der ligger i files */ }
 
             {

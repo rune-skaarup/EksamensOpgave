@@ -17,9 +17,7 @@ const Kotankt = () => {
     const [ loading, setLoading ] = useState()
     const [ isValid, setIsValid ] = useState( false );
     const [ message, setMessage ] = useState( '' );
-    const [send, setSend] = useState()
-
-
+    const [ send, setSend ] = useState()
 
     const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
@@ -56,19 +54,22 @@ const Kotankt = () => {
     }, [] )
 
 
-    const handleSubmit = (e) => {
-    
-            e.preventDefault(); // forhindrer reload af siden 
-    
-         postMessage(e.target).then(data => {
-                setSend(data);
-                setFejl( false )
-                e.target.reset()
-            }).catch(err => {
-                setFejl( true )
-                setSend()
-            })
-        } 
+    const handleSubmit = ( e ) => {
+
+        e.preventDefault(); // forhindrer reload af siden 
+
+        postMessage( e.target ).then( data => {
+            setSend( data );
+            setFejl( false )
+
+            e.target.reset()
+
+        } ).catch( err => {
+            
+            setFejl( true )
+            setSend()
+        } )
+    }
 
 
     return (
@@ -87,16 +88,16 @@ const Kotankt = () => {
                         <p>{ kontakt.address }</p>
                         <p>{ kontakt.zipcity }</p>
                         <p>{ kontakt.country }</p>
-                        <p><img src={phone} alt="Telefon" /> { kontakt.phone }</p>
-                        <p><img src={envelope} alt="email" />{ kontakt.email }</p>
+                        <p><img src={ phone } alt="Telefon" /> { kontakt.phone }</p>
+                        <p><img src={ envelope } alt="email" />{ kontakt.email }</p>
                     </div>
                 }
 
                 <div className="form">
                     <h1>Skrive til os</h1>
-                    <form onSubmit={ handleSubmit }  className="kontaktform" >
+                    <form onSubmit={ handleSubmit } className="kontaktform" >
 
-                        {message && message} 
+                        { message && message }
                         <input type="text" placeholder="Navn" name="name" />
 
                         <input type="text" placeholder="Firma" name="company" />
@@ -107,7 +108,7 @@ const Kotankt = () => {
 
                         <textarea name="message" placeholder='besked' id="" rows="10"></textarea>
 
-                        <button id="OptionSubmit"  type='submit' > Send </button>
+                        <button id="OptionSubmit" type='submit' > Send </button>
 
                     </form>
 

@@ -26,6 +26,7 @@ import { useState } from 'react'
 const useShowThumb = () => {
 
     const [ thumb, setThumb ] = useState()
+    const [ thumbs, setThumbs ] = useState()
 
     const makeThumb = file => {
 
@@ -43,8 +44,24 @@ const useShowThumb = () => {
         }
 
     }
+    const makeThumbs = file => {
 
-    return [ thumb, makeThumb ]
+        if ( file ) {
+
+            let reader = new FileReader();
+
+            reader.onload = ( r ) => {
+                setThumbs( r.target.result )
+            }
+
+            reader.readAsDataURL( file )
+        } else {
+            setThumbs();
+        }
+
+    }
+
+    return [ thumb, makeThumb, thumbs, makeThumbs ]
 
 }
 

@@ -23,6 +23,7 @@ const AdminNavbar = () => {
           <li> <NavLink to="adminAbout"> Admin about </NavLink> </li>
           <li> <NavLink to="adminTour"> Admin tour </NavLink> </li>
           <li> <NavLink to="adminOpretTour"> Admin Opret ny tour </NavLink> </li>
+          <li> <NavLink to="adminSeKontakt">Admin Kontakt</NavLink> </li>
 
           {
             loggedin &&
