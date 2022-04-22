@@ -127,6 +127,15 @@ export const sletBeskeder = ( id ) => {
     return response;
 }
 
+// PUT http://localhost:5099/contactinformation/admin
+export const adminRetKontakt = ( data) => {
+    const retKontakt = new FormData( data )
+    let response = axios.put( api.baseUrl + "contactinformation/admin", retKontakt )
+        .then( res => { return res.data } )
+        .catch( error => { return error.response } )
+    return response;
+}
+
 // ---------- FOOTER
 // -------------------------------------------------------------
 
@@ -136,6 +145,16 @@ export const hentFooter = () => {
         .then( res => { return res.data } )
     return response;
 }
+
+// PUT
+export const adminRetFooter = ( data ) => {
+    const retFooter = new FormData( data )
+    let response = axios.put( api.baseUrl + "footer/admin", retFooter)
+        .then( res => { return res.data } )
+        .catch( error => { return null } )
+    return response;
+}
+
 
 // ---------- LOGIN
 // -------------------------------------------------------------
@@ -160,6 +179,37 @@ export const getLogin = () => {
 // GET
 export const getLogOut = () => {
     let response = axios.get( api.baseUrl + "login/logout", { withCredentials: true } )
+        .then( res => { return res.data } )
+        .catch( error => { return null } )
+    return response;
+}
+
+// ---------- LOGIN
+// -------------------------------------------------------------
+// GET http://localhost:5099/newssubscription/admin
+
+// GET
+export const getNews = () => {
+    let response = axios.get( api.baseUrl + "newssubscription/admin" )
+        .then( res => { return res.data } )
+        .catch( error => { return null } )
+    return response;
+}
+
+//Post http://localhost:5099/newssubscription
+
+// POST 
+export const postNews = ( data ) => {
+    const Nyheder = new FormData( data )
+    let response = axios.post( api.baseUrl + "newssubscription", Nyheder )
+        .then( res => { return res.data } )
+        .catch( error => { return null } )
+    return response;
+}
+
+// DELETE http://localhost:5099/newssubscription/afmeld
+export const sletTilmelding = ( id ) => {
+    let response = axios.delete( api.baseUrl + "newssubscription/admin/" + id )
         .then( res => { return res.data } )
         .catch( error => { return null } )
     return response;

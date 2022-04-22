@@ -50,27 +50,27 @@
       letter-spacing: 1px;
    }
 
-   .arrow {
+   a {
       grid-column: 3/4;
       grid-row: 3/4;
+      .arrow {
+         display: block;
+         object-fit: contain;
+         width: 15%;
+         margin: 0 auto;
+         margin-top: 50px;
 
-      display: block;
-      object-fit: contain;
-      width: 15%;
-      margin: 0 auto;
-      margin-top: 50px;
+         animation: myAnim 1s ease 0s infinite alternate forwards;
 
-      animation: myAnim 1s ease 0s infinite alternate forwards;
+         @keyframes myAnim {
+            0% {
+               transform: translateY(20px);
+            }
 
-      @keyframes myAnim {
-         0% {
-            transform: translateY(20px);
-         }
-      
-         100% {
-            transform: translateY(50px);
+            100% {
+               transform: translateY(50px);
+            }
          }
       }
-      
    }
 }

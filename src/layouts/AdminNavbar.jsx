@@ -24,6 +24,7 @@ const AdminNavbar = () => {
           <li> <NavLink to="adminTour"> Admin tour </NavLink> </li>
           <li> <NavLink to="adminOpretTour"> Admin Opret ny tour </NavLink> </li>
           <li> <NavLink to="adminSeKontakt">Admin Kontakt</NavLink> </li>
+          <li> <NavLink to="adminSeFooter">Admin Footer &amp; Kontakt info</NavLink> </li>
 
           {
             loggedin &&

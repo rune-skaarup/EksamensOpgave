@@ -1,69 +1,70 @@
 @import "../../sass/variables";
 
-.retAbout{
+.retAbout {
     height: 100vh;
     padding: 40px 200px;
 
-    h1{
+    h1 {
         font-family: Eurostile bold;
         text-transform: capitalize;
-        
-        margin-bottom: 20px;    
-    }   
 
-    form{
-        label:nth-of-type(1){
+        margin-bottom: 20px;
+    }
 
-            input{
+    h2{
+        font-size: 1.5em;
+    }
+
+    form {
+        label:nth-of-type(1) {
+            input {
                 display: block;
                 width: 60%;
-                padding: 10px;
-                font-size: 18px;
+                padding: 15px;
+                font-size: 1.4em;
                 border-radius: 5px;
                 background-color: white;
                 margin-bottom: 15px;
 
                 border: 2px solid rgba(183, 183, 183, 0.533);
             }
-
         }
 
-        label:nth-of-type(2){
-            .ck-editor{
+        label:nth-of-type(2) {
+            .ck-editor {
+                display: block;
                 width: 60%;
-                font-size: 18px;
+                font-size: 1.4em;
                 border-radius: 5px;
                 background-color: white;
-
+                margin-bottom: 15px;
             }
         }
 
-        label:nth-of-type(3){
-            h4{
+        label:nth-of-type(3) {
+            h4 {
                 margin-top: 10px;
+                font-size: 1.3em;
             }
 
-            input{
-
+            input {
                 margin-top: 5px;
-                font-size: 16px;
-                text-transform: capitalize;
+                font-size: 1.4em;
                 color: white;
                 z-index: 1;
                 color: $col_Mbutton;
                 cursor: pointer;
 
-                &:hover{
+                &:hover {
                     background-color: $col_headerGrey;
                 }
             }
         }
 
         button {
-
             margin: 20px auto;
             padding: 6px 10px;
-            font-size: 16px;
+            font-size: 1.4em;
             text-transform: capitalize;
             color: white;
             z-index: 1;
@@ -71,8 +72,6 @@
             border: none;
             border-radius: 3px;
             cursor: pointer;
-            
         }
     }
-
 }

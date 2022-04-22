@@ -42,7 +42,7 @@ const Navbar = () => {
   return (
 
     <nav >
-      <div className="navbar">
+      <div className="navbar" id='navbar'>
 
         <img src={ logo } alt="Logo" />
 

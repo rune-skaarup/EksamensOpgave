@@ -14,6 +14,7 @@ import AdminTour from './pages/admin/AdminTour';
 import AdminAbout from './pages/admin/AdminAbout'
 import AdminKontakt from './pages/admin/AdminKontakt';
 import Login from './pages/Login';
+import AdminFooter from './pages/admin/AdminFooter';
 
 // Context-provider er en "global state" med en login funktion
 import LoginContextProvider from "./context/LoginContext";
@@ -38,6 +39,7 @@ function App () {
             <Route path="adminOpretTour" element={ <AdminOpretTour /> } />
             <Route path="adminRetTour/:id" element={ <AdminRetTour /> } />
             <Route path="adminSeKontakt" element={ <AdminKontakt /> } />
+            <Route path="adminSeFooter" element={ <AdminFooter /> } />
             <Route path="*" element={ <NoMatch /> } />
           </Route>
 

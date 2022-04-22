@@ -19,7 +19,7 @@ const Hero = () => {
       <h1>Events</h1>
       <h1>Travels</h1>
 
-      <img src={arrow} alt="pil ned" className="arrow" />
+     <a href="#navbar"><img src={arrow} alt="pil ned" className="arrow" /></a> 
     </div>
   )
 }
