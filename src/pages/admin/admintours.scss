@@ -13,13 +13,14 @@
         }
 
         .icon {
-            font-size: 40px;
+            font-size: 30px;
             color: black;
             
         }
 
         img {
             width: 50%;
+            object-fit: cover;
         }
 
         thead {
@@ -32,7 +33,7 @@
                     a{
                         text-decoration: none;
                         color: $col_backgroundGrey;
-                        font-size: 1.3em;
+                        font-size: 1em;
                         &:hover{
                             color: white;
                         }
@@ -52,7 +53,7 @@
         }
     }
     .title {
-        font-size: 1.6em;
+        font-size: 1.2em;
         font-family: Eurostile bold;
         padding: 0;
     }
@@ -60,7 +61,7 @@
     table,
     td,
     th {
-        font-size: 1.2em;
+        font-size: 1em;
         padding: 10px;
         border: 1px solid black;
         

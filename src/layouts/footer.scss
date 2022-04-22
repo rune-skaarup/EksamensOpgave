@@ -13,3 +13,15 @@
         color: $col_button;
     }
 }
+
+@media (max-width: 800px) {
+
+    .footer{ 
+        font-size: 1em;
+
+        span{
+            display: inline;
+        }
+    }
+
+}

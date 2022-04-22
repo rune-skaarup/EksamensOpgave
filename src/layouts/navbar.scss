@@ -7,16 +7,15 @@ nav {
 	z-index: 999;
 
 	.navbar {
-		padding: 20px 0px;
 		margin: 0;
 		display: flex;
 		align-items: center;
 		background-color: $col_navbar;
 
 		img {
-			height: 80px;
+			height: 70px;
 			padding: 15px;
-			margin-left: 8%;
+			margin-left: 2%;
 			object-fit: contain;
 		}
 
@@ -32,7 +31,7 @@ nav {
 			height: 21px;
 		
 			.bar {
-				height: 3px;
+				height: 5px;
 				width: 100%;
 				background-color: black;
 				border-radius: 10px;
@@ -71,7 +70,7 @@ nav {
 				display: block;
 				text-decoration: none;
 				padding: 1rem;
-				font-size: 1.6em;
+				font-size: 1em;
 				background-color: $col_navbar;
 				border: none;
 
@@ -97,7 +96,7 @@ nav {
 					display: block;
 					text-decoration: none;
 					padding: 1rem;
-					font-size: 1.4em;
+					font-size: 1em;
 				}
 
 				.search {
@@ -106,7 +105,7 @@ nav {
 
 					input {
 						border-radius: 10px;
-						font-size: 1.6em;
+						font-size: 1em;
 						width: 300px;
 						margin-right: 10px;
 						padding: 0 20px;
@@ -117,7 +116,7 @@ nav {
 						cursor: zoom-in;
 						text-transform: capitalize;
 						background-color: transparent;
-						font-size: 1.6em;
+						font-size: 1em;
 						color: $col_headerGrey;
 						font-family: Eurostile bold;
 						padding: 0 10px;
@@ -137,8 +136,22 @@ nav {
 		align-items: flex-start;
 	}
 
+	span{
+		margin-left: 10px;
+		margin-top: 5px;	
+		display: block;
+		height: 50px;
+		width: 100%;
+		z-index: 1999;
+
+	}
+
 	.toggle-button {
-		z-index: 1000;
+		height: 100px;
+		width: 100%;
+		position: absolute;
+		left: 0;
+
 		display: block !important ;
 	}
 

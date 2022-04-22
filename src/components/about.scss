@@ -1,39 +1,48 @@
 @import "../sass/variables";
 
-.aContainer{
+.aContainer {
     margin-top: 100px;
 
-    .omOs{
-
-        padding: 15px ;
+    .omOs {
+        padding: 15px;
         text-align: center;
         background-color: $col_headerGrey;
         border-radius: 8px;
         color: white;
         font-family: Eurostile bold;
+    }
+    .about {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: 1fr;
+
+        margin: 50px 0px;
+        img {
+            height: 130px;
+            object-fit: cover;
         }
-        .about{
+
+        p {
+            font-size: 1.1em;
+            padding-right: 20px;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .aContainer {
+        margin-top: 30px;
+
+        
+            .about {
                 display: grid;
-                grid-template-columns: 3fr 1fr;
-                grid-template-rows: 1fr;   
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr;
 
-                margin: 50px 0px;
-            img{
-
-                height: 130px;
-                object-fit: cover;
-                
+                img {
+                    display: none!important;
+                }
             }
-
-            p{
-                font-size: 24px;
-                padding-right: 20px;
-
-            }
-
-        }
-
-
-
-
+        
+    }
 }

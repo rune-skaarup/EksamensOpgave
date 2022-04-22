@@ -2,7 +2,7 @@
 
 nav {
     .navbar {
-        padding: 20px 0px;
+        padding: 10px 0px;
         margin: 0;
         display: flex;
         align-items: center;
@@ -11,7 +11,7 @@ nav {
         img {
             height: 80px;
             padding: 15px;
-            margin-left: 8%;
+            margin-left: 2%;
             object-fit: contain;
         }
 
@@ -27,7 +27,7 @@ nav {
 				font-family: Eurostile bold;
 				display: block;
 				text-decoration: none;
-				font-size: 1.6em;
+				font-size: 1em;
 				background-color: $col_navbar;
 				border: none;
 
@@ -55,7 +55,7 @@ nav {
                 display: block;
                 text-decoration: none;
                 padding: 1rem;
-                font-size: 1.6em;
+                font-size: 1em;
             }
         }
     }

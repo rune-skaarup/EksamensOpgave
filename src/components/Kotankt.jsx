@@ -182,7 +182,7 @@ const Kotankt = () => {
 
 
                 <div>
-                    <h1>Tilmeld Nyhedsbrev</h1> <br />
+                    <h1 id='h1-3'>Tilmeld Nyhedsbrev</h1> <br />
                     <form onSubmit={ handleSubmit2 } className="NewsForm" >
                         { message2 && <h3>{ message2 }</h3> }
 
@@ -213,7 +213,7 @@ const Kotankt = () => {
                 </div>
 
                 <div className="form">
-                    <h1>Skrive til os</h1>
+                    <h1>Skriv til os</h1>
                     <form onSubmit={ handleSubmit } className="kontaktform" >
 
                         { message && <h3>{ message }</h3> }
