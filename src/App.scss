@@ -1,12 +1,48 @@
 @import "./sass/variables";
 
-*{
+* {
     margin: 0;
     padding: 0%;
     box-sizing: border-box;
-
 }
 
-.App{
-    background-color: $col_backgroundGrey ;
+.App {
+    background-color: $col_backgroundGrey;
+
+    .login {
+        padding: 30px;
+
+        h1{
+            margin-bottom: 10px;
+
+        }
+        form {
+            label{
+                font-size: 24px;
+                input{
+                    margin-left: 10px;
+                    padding: 5px;
+                    width: 250px;
+                    font-size: 20px;
+                    border-radius: 5px;
+                    border: 1px solid;
+                }
+
+            }
+
+            button{
+                margin-top: 20px;
+                margin-left: 1%;
+                padding: 6px 10px;
+                font-size: 16px;
+                text-transform: capitalize;
+                color: white;
+                z-index: 1;
+                background-color: $col_Mbutton;
+                border: none;
+                border-radius: 3px;
+                cursor: pointer;
+            }
+        }
+    }
 }

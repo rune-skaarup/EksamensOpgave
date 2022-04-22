@@ -98,6 +98,7 @@ const Kotankt = () => {
                     <form onSubmit={ handleSubmit } className="kontaktform" >
 
                         { message && message }
+                        
                         <input type="text" placeholder="Navn" name="name" />
 
                         <input type="text" placeholder="Firma" name="company" />

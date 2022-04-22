@@ -15,13 +15,10 @@ const Modal = ( { children } ) => {
     return (
         <div id="modal" >
             <div className='mContainer'>
-                
 
                 { children }
-               
+
             </div>
-
-
 
             {
                 loading && <Loading />

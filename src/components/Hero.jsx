@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
-import "./hero.scss"
 
-import hero from '../assets/img/hero.png'
-import logo from '../assets/img/logo.png'
+//SCSS
+import "./hero.scss";
+
+import hero from '../assets/img/hero.png';
+import logo from '../assets/img/logo.png';
+import arrow from '../assets/img/arrow.png';
 
 const Hero = () => {
 
@@ -15,6 +18,8 @@ const Hero = () => {
 
       <h1>Events</h1>
       <h1>Travels</h1>
+
+      <img src={arrow} alt="pil ned" className="arrow" />
     </div>
   )
 }

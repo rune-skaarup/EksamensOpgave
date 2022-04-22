@@ -27,7 +27,7 @@ const AdminNavbar = () => {
 
           {
             loggedin &&
-            <button onClick={ signout }> LOG UD </button>
+            <button className='logud' onClick={ signout }> LOG UD </button>
           }
 
         </ul>

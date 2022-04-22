@@ -8,20 +8,14 @@ import './Tours.scss';
 
 //IMG
 import Star from '../assets/img/redStar.png'
-import Formel from '../assets/img/f1.jpg'
 import close from "../assets/img/close.png"
 
 
 //Modal
 import Modal from "../helpers/Modal.js"
 
-//Import slider
-//import { showSlides, currentSlide, pauseSlideshow } from "../helpers/slider"
-//import 'react-slideshow-image/dist/styles.css'
-//import { Slide } from 'react-slideshow-image';
-
 //apikald
-import { imageUrl, hentTours } from '../helpers/apikald';
+import { imageUrl, hentTours} from '../helpers/apikald';
 
 
 
@@ -32,6 +26,7 @@ const Tours = () => {
     const [ fejl, setFejl ] = useState()
     const [ loading, setLoading ] = useState()
     const [ valg, setValg ] = useState()
+    const [ active, setActive ] = useState( 0 )
 
     useEffect( () => {
 
@@ -41,21 +36,22 @@ const Tours = () => {
             if ( res ) {
                 // Data
                 setTeaser( res )
-                setValg()
-                //Start show
-                //  showSlides();
-
                 setFejl( false )
+
             } else {
+
                 // No data
                 setFejl( true )
                 setTeaser()
+                setValg()
+
             }
             setLoading( false );
 
         } )
 
     }, [] )
+
 
     const rating = ( rating ) => {
         let redStar = '';
@@ -74,11 +70,26 @@ const Tours = () => {
         console.log( teaser[ id ] )
 
     }
-
     const toggleModal = () => {
         let target = document.querySelector( "#modal" );
         target.classList.toggle( "active" );
     }
+
+    useEffect( () => {
+        var timeout = setTimeout( () => {
+
+            if ( active < valg.gallery.length - 1 ) {
+                setActive( active + 1 )
+            } else {
+                setActive( 0 );
+            }
+
+        }, 2000 )
+        return () => {
+            clearTimeout( timeout )
+        }
+
+    }, [ active ] )
 
     return (
         <div className='tContainer'>
@@ -116,7 +127,22 @@ const Tours = () => {
                                 <h1>{ valg.title } </h1>
                                 <hr className='hr1' />
 
-                                <img src={ Formel } id="dummy" alt="dummy" />
+                                <div className='slideshow-container'>
+
+                                    <ul>
+                                        {
+
+                                            valg.gallery.map( ( v, i ) =>
+                                                <li className={ i == active ? "active" : "" } key={ i } style={ { backgroundImage: "url(" + v + ")" } }>
+
+                                                    <img src={ imageUrl + "/tours/" + v } alt="Billede af kunde" />
+
+                                                </li>
+                                            )
+                                        }
+                                    </ul>
+                                </div>
+
                                 <h1>{ valg.title } </h1>
 
                                 <div className='rating'>{ parse( rating( valg.rating ) ) }</div>
@@ -133,26 +159,6 @@ const Tours = () => {
 
                                 <button onClick={ toggleModal }> close </button>
 
-                                {/*                                 <div className="slideshow-container">
-                                    {
-                                        // map mySlides/slides ud - 1 slide for hver data
-                                        <div className="mySlides">
-                                            { valg.gallery.map( ( v, i ) =>
-                                                <img src={ imageUrl + "tours/" + v } key={ i } alt="Billede af rejsemålet" />
-                                            ) }
-                                        </div>
-
-                                    }
-                                </div> */}
-                                {/*                                 <div className="slide-container">
-                                    <Slide arrows={ true } indicators={ true } duration={ 5000 }>
-                                        { valg.gallery.map( ( v, i ) =>
-                                            <div className="each-slide" key={ i }>
-                                                <img src={ imageUrl + "/tours/" + v } key={ i } alt="Billede af rejsemålet" />
-                                            </div>
-                                        ) }
-                                    </Slide>
-                                </div> */}
                             </div>
 
                         }

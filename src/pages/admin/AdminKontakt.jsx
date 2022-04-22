@@ -62,22 +62,25 @@ const AdminKontakt = () => {
     }
 
     const valthis = () => {
-        var checkBox = document.getElementsByClassName( 'check' );
-        var isChecked = false;
-        for ( var i = 0; i < checkBox.length;) {
+        let checkBox = document.getElementsByClassName( 'check' );
+        let isChecked = false;
+        for ( var i = 0; i < checkBox.length; i++ ) {
             if ( checkBox[ i ].checked ) {
                 isChecked = true;
             };
         };
         if ( isChecked ) {
-            alert( 'At least one checkbox checked!' );
+            
+
         } else {
             alert( 'Please, check at least one checkbox!' );
+            sletBeskeder( null )
+
         }
     }
 
     return (
-        <div className='kontakt'>
+        <div className='adminKontakt'>
             <div>
                 {
                     <div className='kontaktBeskeder'>
@@ -100,7 +103,7 @@ const AdminKontakt = () => {
                                     </div>
                                     <form action="">
                                         <input type="checkbox" className="check" required />
-                                        <button className="icon"> <AiFillDelete  onClick={ () => handleSlet( k._id, valthis())} /> </button>
+                                        <button className="icon"> <AiFillDelete onClick={ () => handleSlet( k._id, valthis() ) } /> </button>
                                     </form>
                                 </div>
 

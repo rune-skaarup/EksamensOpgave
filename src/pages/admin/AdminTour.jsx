@@ -72,7 +72,7 @@ const AdminTour = () => {
                             <th colSpan="2"><Link to="/admin/adminOpretTour"> Opret ny </Link></th>
                         </tr>
                         <tr>
-                            <th>Thumb</th>
+                            <th>Billede</th>
                             <th>Navn</th>
                             <th>Ret</th>
                             <th>Slet</th>

@@ -16,8 +16,8 @@ const Home = () => {
 
             <div className="border">
                 <About />
-                <Tours />
-                <Kontakt />
+                <Tours id="tours"/>
+                <Kontakt id="kontakt"/>
 
             </div>
 

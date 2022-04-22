@@ -35,7 +35,7 @@ const AdminRetTour = () => {
     const [ thumb, makeThumb ] = useShowThumb();
     const [ thumbs, makeThumbs ] = useShowThumb();
 
-    // Kald api'et og hent den treatment (ud fra id) som skal rettes
+    // Kald api'et og hent den Tour (ud fra id) som skal rettes
     useEffect( () => {
         setLoading( true )
 

@@ -30,7 +30,7 @@ const LoginContextProvider = ( props ) => {
         getLogOut().then( res => {
             if(res) {
                 
-                Navigate("/login", {replace: true} )
+                Navigate("/", {replace: true} )
                 console.log("logout")
             }
         })

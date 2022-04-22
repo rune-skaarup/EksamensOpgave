@@ -4,6 +4,9 @@ import { Navigate } from 'react-router-dom';
 //Henter data fra contextProvider
 import { LoginContext } from '../context/LoginContext';
 
+//SCSS
+//'./Login.scss'
+
 const Login = () => {
 
   const { signin, loggedin } = useContext( LoginContext )
@@ -18,7 +21,7 @@ const Login = () => {
 
   return (
 
-    <div>
+    <div className='login'>
       <h1>Login</h1>
 
       {
@@ -29,14 +32,14 @@ const Login = () => {
         <form onSubmit={ handleLogin }>
 
           <label>
-            Dit brugernavn
+            Dit brugernavn:
             <input type="text" name="email" required />
           </label>
 
           <br /> <br />
 
           <label>
-            Dit password
+            Dit password:
             <input type="password" name="password" required />
           </label>
 

@@ -5,83 +5,127 @@ nav {
 	position: sticky;
 	top: 0;
 	z-index: 999;
-}
 
-.navbar {
-	padding: 0;
-	margin: 0;
-	display: flex;
-	align-items: center;
-	background-color: $col_navbar;
-
-	img {
-		height: 60px;
-		padding: 15px;
-		margin-left: 8%;
-		object-fit: contain;
-	}
-}
-
-// BURGER-knap - skjul på stor skærm
-.toggle-button {
-	display: none;
-	position: absolute;
-	top: 0.75rem;
-	right: 1rem;
-	flex-direction: column;
-	justify-content: space-between;
-	width: 30px;
-	height: 21px;
-
-	.bar {
-		height: 3px;
-		width: 100%;
-		background-color: $col_navbar;
-		border-radius: 10px;
-
-		/* Extra - bar1 bar2 og bar3 */
-		transition: all 0.2s ease;
-	}
-
-	// De 3 streger i burger-ikonet - transition til det her ved "change" på .bar
-	&.change .bar1 {
-		transform: rotate(-45deg) translate(-5px, 5px);
-	}
-	&.change .bar2 {
-		opacity: 0;
-	}
-	&.change .bar3 {
-		transform: rotate(45deg) translate(-8px, -8px);
-	}
-}
-
-.navbar-links {
-	height: 100%;
-
-	ul {
-		display: flex;
+	.navbar {
+		padding: 20px 0px;
 		margin: 0;
-		padding: 0;
-	}
+		display: flex;
+		align-items: center;
+		background-color: $col_navbar;
 
-	li {
-		list-style: none;
-		border-radius: 3px;
-
-		&:hover {
-			color: $col_headerGrey;
-			a {
-				color: white;
-			}
+		img {
+			height: 80px;
+			padding: 15px;
+			margin-left: 8%;
+			object-fit: contain;
 		}
 
-		a {
-			color: #a5a5a5;
-			font-family: Eurostile bold;
-			display: block;
-			text-decoration: none;
-			padding: 1rem;
-			font-size: 20px;
+		// BURGER-knap - skjul på stor skærm
+		.toggle-button {
+			display: none;
+			position: absolute;
+			top: 0.75rem;
+			right: 1rem;
+			flex-direction: column;
+			justify-content: space-between;
+			width: 30px;
+			height: 21px;
+		
+			.bar {
+				height: 3px;
+				width: 100%;
+				background-color: black;
+				border-radius: 10px;
+		
+				/* Extra - bar1 bar2 og bar3 */
+				transition: all 0.2s ease;
+			}
+		
+			// De 3 streger i burger-ikonet - transition til det her ved "change" på .bar
+			&.change .bar1 {
+				transform: rotate(-45deg) translate(-5px, 5px);
+			}
+			&.change .bar2 {
+				opacity: 0;
+			}
+			&.change .bar3 {
+				transform: rotate(45deg) translate(-8px, -8px);
+			}
+		}
+		
+	}
+
+	.navbar-links {
+		height: 100%;
+
+		ul {
+			display: flex;
+			margin: 0;
+			padding: 0;
+
+			.logud {
+				list-style: none;
+				border-radius: 3px;
+				color: #a5a5a5;
+				font-family: Eurostile bold;
+				display: block;
+				text-decoration: none;
+				padding: 1rem;
+				font-size: 1.6em;
+				background-color: $col_navbar;
+				border: none;
+
+				&:hover {
+					color: white;
+				}
+			}
+
+			li {
+				list-style: none;
+				border-radius: 3px;
+				display: flex;
+				&:hover {
+					color: $col_headerGrey;
+					a {
+						color: white;
+					}
+				}
+
+				a {
+					color: #a5a5a5;
+					font-family: Eurostile bold;
+					display: block;
+					text-decoration: none;
+					padding: 1rem;
+					font-size: 1.6em;
+				}
+
+				.search {
+					display: flex;
+					margin-left: 200px;
+
+					input {
+						border-radius: 10px;
+						font-size: 1.6em;
+						width: 300px;
+						margin-right: 10px;
+						padding: 0 20px;
+						font-family: Eurostile bold;
+					}
+
+					button {
+						cursor: zoom-in;
+						text-transform: capitalize;
+						background-color: transparent;
+						font-size: 1.6em;
+						color: $col_headerGrey;
+						font-family: Eurostile bold;
+						padding: 0 10px;
+						border-radius: 10px;
+						border: $col_headerGrey solid 1px;
+					}
+				}
+			}
 		}
 	}
 }
@@ -93,13 +137,12 @@ nav {
 		align-items: flex-start;
 	}
 
-	// BURGER-knap - vis på lille skærm
 	.toggle-button {
-		display: flex;
+		z-index: 1000;
+		display: block !important ;
 	}
 
 	.navbar-links {
-		// Skjul menu (medmindre class active - se herunder)
 		display: none; // Skjul
 		width: 100%;
 

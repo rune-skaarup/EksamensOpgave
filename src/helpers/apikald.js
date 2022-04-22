@@ -75,11 +75,17 @@ export const adminRetTours = ( data, id ) => {
 }
 
 // POST http://localhost:5099/tours/admin
-export const postTours = ( data ) => {
-    const tours = new FormData( data )
-    let response = axios.post( api.baseUrl + "tours/admin/", tours )
+export const opretTours = ( data ) => {
+    let response = axios.post( api.baseUrl + "tours/admin", data )
         .then( res => { return res.data } )
-        .catch( error => { return null } )
+        .catch( error => { return error } )
+    return response;
+}
+
+// GET http://localhost:5099/tours/soeg/søgeordher/ + id 
+export const soegTours = ( soegeord ) => {
+    let response = axios.get( api.baseUrl + "tours/soeg/" + soegeord )
+        .then( res => { return res.data } )
     return response;
 }
 
@@ -106,8 +112,8 @@ export const hentAdminKontakt = () => {
 
 // POST 
 export const postMessage = ( data ) => {
-    const message = new FormData( data )
-    let response = axios.post( api.baseUrl + "contact/", message )
+    const besked = new FormData( data )
+    let response = axios.post( api.baseUrl + "contact/", besked )
         .then( res => { return res.data } )
         .catch( error => { return null } )
     return response;
@@ -120,57 +126,6 @@ export const sletBeskeder = ( id ) => {
         .catch( error => { return null } )
     return response;
 }
-
-
-
-// ---------- TREATMENTS - produkter
-// -------------------------------------------------------------
-
-// GET
-export const hentTreatments = () => {
-    let response = axios.get( api.baseUrl + "treatment" )
-        .then( res => { return res.data } )
-    return response;
-}
-
-// GET http://localhost:5099/treatment/ + id 
-export const hentUdvalgtTreatment = ( id ) => {
-    let response = axios.get( api.baseUrl + "treatment/" + id )
-        .then( res => { return res.data } )
-    return response;
-}
-
-// GET http://localhost:5099/treatment/ + id 
-export const soegTreatment = ( soegeord ) => {
-    let response = axios.get( api.baseUrl + "treatment/soeg/" + soegeord )
-        .then( res => { return res.data } )
-    return response;
-}
-
-// POST 
-export const OpretTreatments = ( nytreatment ) => {
-    let response = axios.post( api.baseUrl + "treatment/admin", nytreatment )
-        .then( res => { return res.data } )
-        .catch( error => { return null } )
-    return response;
-}
-
-// PUT
-export const retTreatment = ( rettreatment, id ) => {
-    let response = axios.put( api.baseUrl + "treatment/admin/" + id, rettreatment )
-        .then( res => { return res.data } )
-        .catch( error => { return null } )
-    return response;
-}
-
-// Delete 
-export const sletTreatment = ( id ) => {
-    let response = axios.delete( api.baseUrl + "treatment/admin/" + id )
-        .then( res => { return res.data } )
-    return response;
-}
-
-
 
 // ---------- FOOTER
 // -------------------------------------------------------------

@@ -2,14 +2,14 @@
 
 nav {
     .navbar {
-        padding: 0;
+        padding: 20px 0px;
         margin: 0;
         display: flex;
         align-items: center;
         background-color: $col_navbar;
 
         img {
-            height: 60px;
+            height: 80px;
             padding: 15px;
             margin-left: 8%;
             object-fit: contain;
@@ -19,6 +19,23 @@ nav {
             display: flex;
             margin: 0;
             padding: 0;
+
+			.logud {
+				list-style: none;
+				border-radius: 3px;
+				color: #a5a5a5;
+				font-family: Eurostile bold;
+				display: block;
+				text-decoration: none;
+				font-size: 2em;
+				background-color: $col_navbar;
+				border: none;
+
+				&:hover {
+					color: white;
+				}
+			}
+
         }
 
         li {
@@ -38,7 +55,7 @@ nav {
                 display: block;
                 text-decoration: none;
                 padding: 1rem;
-                font-size: 20px;
+                font-size: 2em;
             }
         }
     }

@@ -1,6 +1,6 @@
 @import "../../sass/variables";
 
-.kontakt {
+.adminKontakt {
     padding: 20px 10%;
     height: 100%;
 
@@ -38,7 +38,8 @@
                 }
             }
             form {
-                margin-left: 90%;
+                margin-left: 85%;
+                margin-bottom: 20px;
  
                 .icon {
                     position: absolute;
@@ -52,6 +53,10 @@
                 }
 
                 input {
+                    position: absolute;
+                    right: 30;
+
+
                     width: 20px;
                     height: 20px;
                     margin-top: 5px;

@@ -19,7 +19,7 @@ import './adminabout.scss';
 const AdminAbout = () => {
 
   //STATE
-  const [ about, setAbout ] = useState() //Treatments der skal rettes   
+  const [ about, setAbout ] = useState() //About der skal rettes   
   const [ fejl, setFejl ] = useState()
   const [ loading, setLoading ] = useState( false )
   const [ besked, setBesked ] = useState()
@@ -56,7 +56,7 @@ const AdminAbout = () => {
 
     setLoading( true )
 
-    // Send treatment til apikalds filen
+    // Send About til apikalds filen
     adminRetAbout( e.target ).then( res => {
 
       if ( res ) {
@@ -130,7 +130,7 @@ const AdminAbout = () => {
 
           <br />
 
-          <button type='submit'>Ret treatment</button>
+          <button type='submit'>Ret About</button>
 
         </form>
       }

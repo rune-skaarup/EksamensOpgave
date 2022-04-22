@@ -9,7 +9,9 @@
 
     h2 {
         font-size: 2em;
+        text-transform: capitalize;
         margin-bottom: 20px;
+        padding: 0;
     }
 
     form {
@@ -25,8 +27,8 @@
             input {
                 display: block;
                 width: 60%;
-                padding: 10px;
-                font-size: 18px;
+                padding: 15px;
+                font-size: 20px;
                 border-radius: 5px;
                 background-color: white;
                 margin-bottom: 15px;
@@ -37,7 +39,7 @@
 
         .ck-editor {
             width: 60%;
-            font-size: 18px;
+            font-size: 20px;
             border-radius: 5px;
             background-color: white;
             margin-bottom: 15px;
