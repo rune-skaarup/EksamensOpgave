@@ -32,7 +32,7 @@ function App () {
 
 
           {/* ADMIN-routes  */ }
-          <Route path="/admin" element={ <AdminLayout /> } >
+          <Route path="/admin/" element={ <AdminLayout /> } >
             <Route path="home" index element={ <AdminHome /> } />
             <Route path="adminAbout" element={ <AdminAbout /> } />
             <Route path="AdminTour" element={ <AdminTour /> } />

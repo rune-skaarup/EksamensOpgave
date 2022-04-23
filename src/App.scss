@@ -11,19 +11,25 @@
 
     .login {
         padding: 30px;
+        height: 100vh;
+
+        text-align: center;
 
         h1{
             margin-bottom: 10px;
+            font-size: 2em;
 
         }
+
         form {
+
             label{
-                font-size: 24px;
+                font-size: 1.4em;
                 input{
-                    margin-left: 10px;
+                    margin-left: 5px;
                     padding: 5px;
                     width: 250px;
-                    font-size: 20px;
+                    font-size: 0.8em;
                     border-radius: 5px;
                     border: 1px solid;
                 }
@@ -31,10 +37,8 @@
             }
 
             button{
-                margin-top: 20px;
-                margin-left: 1%;
-                padding: 6px 10px;
-                font-size: 16px;
+                padding: 10px 16px;
+                font-size: 1.2em;
                 text-transform: capitalize;
                 color: white;
                 z-index: 1;

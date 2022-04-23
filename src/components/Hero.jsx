@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-
 //SCSS
 import "./hero.scss";
 
@@ -12,16 +11,17 @@ const Hero = () => {
   return (
 
     <div className="hContainer">
-      
-      <img src={hero} alt="Hero" className="centerLogo"/>
-      <img src={logo} alt="Logo" className="cornerLogo"/>
+
+      <img src={ hero } alt="Hero" className="centerLogo" />
+      <img src={ logo } alt="Logo" className="cornerLogo" />
 
       <h1>Events</h1>
       <h1>Travels</h1>
 
-     <a href="#navbar"><img src={arrow} alt="pil ned" className="arrow" /></a> 
+      <a href="#navbar"><img src={ arrow } alt="pil ned" className="arrow" /></a>
+ 
     </div>
-  )
+ )
 }
 
 export default Hero

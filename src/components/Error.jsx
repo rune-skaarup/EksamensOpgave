@@ -2,7 +2,7 @@ import React from 'react'
 
 const Error = ( {fejlbesked}) => {
   return (
-    <div>Error {fejlbesked}</div>
+    <div> Fejl! {fejlbesked}</div>
   )
 }
 

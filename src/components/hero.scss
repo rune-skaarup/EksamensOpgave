@@ -91,7 +91,7 @@
          display: block;
          margin: 0 auto;
          padding: 15px;
-         width: 20%;
+         width: 30%;
          object-fit: cover;
       }
 
@@ -131,7 +131,7 @@
          .arrow {
             display: block;
             object-fit: contain;
-            width: 4%;
+            width: 6%;
             margin: 0 auto;
 
 
@@ -143,7 +143,7 @@
                }
 
                100% {
-                  transform: translateY(50px);
+                  transform: translateY(30px);
                }
             }
          }

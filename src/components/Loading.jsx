@@ -4,7 +4,7 @@ const Loading = () => {
 
   return (
     <div>
-      Der skal laves en bedre Loading...
+      Der er ved at blive loaded
     </div>
   )
 }

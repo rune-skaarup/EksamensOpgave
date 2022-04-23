@@ -21,8 +21,8 @@
     }
 
     .mContainer {
-        margin: 7% auto 100px auto;
-        width: 27%;
+        margin: 100px auto 100px auto;
+        width: 38%;
         height: auto;
 
         background-color: white;
@@ -36,6 +36,7 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr;
+            width: 5;
 
             .slideshow-container {
                 grid-column: 1/-1;
@@ -218,7 +219,7 @@
         }
 
         .mContainer {
-            margin: 20% auto 100px auto;
+            margin: 100px auto 100px auto;
             width: 70%;
             height: auto;
 

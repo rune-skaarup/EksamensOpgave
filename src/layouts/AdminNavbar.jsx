@@ -1,7 +1,6 @@
 import React, { useContext } from 'react'
 import { NavLink } from 'react-router-dom'
 import { LoginContext } from '../context/LoginContext'
-
 import logo from "../assets/img/logo.png";
 
 //SCSS
@@ -34,6 +33,8 @@ const AdminNavbar = () => {
         </ul>
       </div>
     </nav>
+
+
   )
 }
 

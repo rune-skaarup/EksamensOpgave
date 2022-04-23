@@ -25,8 +25,8 @@ const Navbar = () => {
 
     e.preventDefault(); // forhindrer reload af siden 
 
-    
-    soegTours( e.target.search.value).then( data => {
+
+    soegTours( e.target.search.value ).then( data => {
       setSend( data );
       setFejl( false )
 

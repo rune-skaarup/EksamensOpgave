@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
+import Loading from "../../components/Loading"
+import Error from '../../components/Error';
+
 
 // CKEditor imports
 import Editor from '@ckeditor/ckeditor5-build-classic'
@@ -199,11 +202,11 @@ const AdminRetTour = () => {
             }
 
             {
-                loading && <h1>Loading...</h1>
+                loading && <Loading />
             }
 
             {
-                fejl && <h1>Der er opstået en fejl</h1>
+                fejl && <Error fejlbesked={ fejl } />
             }
         </div>
     )

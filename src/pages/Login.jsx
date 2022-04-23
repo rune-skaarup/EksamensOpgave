@@ -4,8 +4,6 @@ import { Navigate } from 'react-router-dom';
 //Henter data fra contextProvider
 import { LoginContext } from '../context/LoginContext';
 
-//SCSS
-//'./Login.scss'
 
 const Login = () => {
 
@@ -52,7 +50,7 @@ const Login = () => {
 
       {
         //Hvis det virker og du logger ind så bliver du sendt til admin siden
-        loggedin && <Navigate to="/admin" replace />
+        loggedin && <Navigate to="/admin/home" replace />
 
       }
 

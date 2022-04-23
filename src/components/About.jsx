@@ -52,8 +52,6 @@ const About = () => {
         </div>
       }
 
-
-
       {
         loading && <Loading />
       }
@@ -62,11 +60,7 @@ const About = () => {
         fejl && <Error fejlbesked={ fejl } />
       }
 
-
     </div>
-
-
-
 
   )
 

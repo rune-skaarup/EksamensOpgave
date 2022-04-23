@@ -3,7 +3,8 @@ import React from 'react'
 const AdminHome = () => {
     return (
         <div>
-            <h1>AdminHome - startside til admin</h1>
+            <h1>Tom admin side! For at have en adminhome</h1>
+
         </div>
     )
 }

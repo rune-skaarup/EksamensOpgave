@@ -23,23 +23,22 @@ nav {
 		.toggle-button {
 			display: none;
 			position: absolute;
+			margin-top: 10px;
+			width: 50px;
 			top: 0.75rem;
-			right: 1rem;
-			flex-direction: column;
-			justify-content: space-between;
-			width: 30px;
-			height: 21px;
-		
+			left: 0;
+			margin-left: 20px;
+
 			.bar {
-				height: 5px;
-				width: 100%;
+				margin-top: 6px;
+				height: 7px;
 				background-color: black;
 				border-radius: 10px;
-		
+
 				/* Extra - bar1 bar2 og bar3 */
 				transition: all 0.2s ease;
 			}
-		
+
 			// De 3 streger i burger-ikonet - transition til det her ved "change" på .bar
 			&.change .bar1 {
 				transform: rotate(-45deg) translate(-5px, 5px);
@@ -48,10 +47,9 @@ nav {
 				opacity: 0;
 			}
 			&.change .bar3 {
-				transform: rotate(45deg) translate(-8px, -8px);
+				transform: rotate(45deg) translate(-13px, -13px);
 			}
 		}
-		
 	}
 
 	.navbar-links {
@@ -98,17 +96,23 @@ nav {
 					padding: 1rem;
 					font-size: 1em;
 				}
+			}
+
+			li:nth-of-type(5) {
+				position: absolute;
+				right: 0;
+				top: 28px;
+
+				margin-right: 3%;
 
 				.search {
 					display: flex;
-					margin-left: 200px;
-
 					input {
 						border-radius: 10px;
-						font-size: 1em;
-						width: 300px;
+						font-size: 1.2em;
+						width: 20vw;
 						margin-right: 10px;
-						padding: 0 20px;
+						padding: 5px 20px;
 						font-family: Eurostile bold;
 					}
 
@@ -134,51 +138,63 @@ nav {
 	.navbar {
 		flex-direction: column;
 		align-items: flex-start;
-	}
 
-	span{
-		margin-left: 10px;
-		margin-top: 5px;	
-		display: block;
-		height: 50px;
-		width: 100%;
-		z-index: 1999;
-
-	}
-
-	.toggle-button {
-		height: 100px;
-		width: 100%;
-		position: absolute;
-		left: 0;
-
-		display: block !important ;
-	}
-
-	.navbar-links {
-		display: none; // Skjul
-		width: 100%;
-
-		// Hvis class active = vis menu
-		&.active {
-			display: flex; // Vis
+		span {
+			display: block;
 		}
 
-		ul {
+		.toggle-button {
+			position: relative;
+			display: block !important ;
+		}
+
+		.navbar-links {
+			display: none; // Skjul
 			width: 100%;
-			flex-direction: column;
 
-			li {
-				text-align: center;
-				transition: padding 0.5s ease;
+			// Hvis class active = vis menu
+			&.active {
+				display: flex; // Vis
 			}
 
-			li:hover {
-				padding-left: 1rem;
-			}
+			ul {
+				width: 100%;
+				flex-direction: column;
 
-			li a {
-				padding: 0.5rem 1rem;
+				.logud {
+					display: flex;
+				}
+
+				li {
+					margin-top: 10px;
+					text-align: center;
+					transition: padding 0.5s ease;
+				}
+				li:nth-of-type(5) {
+					position: relative;
+					top: 0px;
+					margin-top: 0;
+
+					.search {
+						display: flex;
+						padding: 5px;
+
+						margin: 10px 0 10px 8px;
+
+						input {
+							width: 100%;
+							height: 2em;
+						}
+					}
+				}
+
+				li:hover {
+					padding-left: 1rem;
+				}
+
+				li a {
+					padding: 0.5rem 1rem;
+				}
 			}
 		}
 	}
