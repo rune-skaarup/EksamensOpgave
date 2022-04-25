@@ -83,7 +83,6 @@ const AdminTour = () => {
                     </thead>
                     <tbody>
                         {
-                            //Looper det ud
                             tours.map( t =>
                                 <tr key={ t._id }>
                                     <td><img src={ imageUrl + "/tours/" + t.coverimage } alt="billede af behandling" /></td>

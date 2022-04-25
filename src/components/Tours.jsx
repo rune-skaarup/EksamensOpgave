@@ -29,7 +29,6 @@ const Tours = () => {
     const [ active, setActive ] = useState( 0 )
 
     useEffect( () => {
-
         setLoading( true )
         hentTours().then( res => {
 

@@ -20,8 +20,6 @@
     "react-modal-video": "^1.2.8",
     "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.0",
-    "react-simple-image-slider": "^2.4.1",
-    "react-slideshow-image": "^3.7.3",
     "sass": "^1.49.8",
     "sass-loader": "^12.6.0",
     "web-vitals": "^2.1.4"

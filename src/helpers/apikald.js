@@ -209,7 +209,7 @@ export const postNews = ( data ) => {
 
 // DELETE http://localhost:5099/newssubscription/afmeld
 export const sletTilmelding = ( id ) => {
-    let response = axios.delete( api.baseUrl + "newssubscription/admin/" + id )
+    let response = axios.delete( api.baseUrl + "newssubscription/admin/", id )
         .then( res => { return res.data } )
         .catch( error => { return null } )
     return response;

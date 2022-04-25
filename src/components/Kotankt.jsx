@@ -22,6 +22,7 @@ const Kotankt = () => {
     const [ message, setMessage ] = useState( '' );
     const [ message2, setMessage2 ] = useState( '' );
     const [ message3, setMessage3 ] = useState( '' );
+    const [ message4, setMessage4 ] = useState();
     const [ send, setSend ] = useState();
     const [ besked, setBesked ] = useState()
 
@@ -114,6 +115,7 @@ const Kotankt = () => {
         postNews( e.target ).then( data => {
             setNews( data );
             setFejl( false )
+            setMessage4( " Du er nu tilmeldt nyhedsbrev" );
 
             e.target.reset()
 
@@ -124,14 +126,16 @@ const Kotankt = () => {
         } )
     }
 
-    const handleSlet = ( id ) => {
+
+    // Aflmeld News
+    const handleSlet = ( e ) => {
 
         //Hvor confirm er true så afmelder den
         if ( window.confirm( "Vil du afmelde?" ) === true ) {
 
             setLoading( true )
 
-            sletTilmelding( id ).then( res => {
+            sletTilmelding( e.target ).then( res => {
 
                 if ( res ) {
                     // Data
@@ -147,7 +151,7 @@ const Kotankt = () => {
         }
     }
 
-    const handleModal = ( id ) => {
+    const handleModal = () => {
         let target = document.querySelector( "#aMModal" );
         target.classList.toggle( "active" );
 
@@ -203,7 +207,6 @@ const Kotankt = () => {
                             <input type="text" name='email' placeholder=" Afmeld nyhedsbrev" onChange={ validateEmail3 } />
 
                             <button id="OptionSubmit" type='submit'> Afmeld </button>
-
 
                         </form>
                         <button onClick={ toggleModal } id="close"> close </button>
